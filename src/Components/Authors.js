@@ -12,7 +12,7 @@ const Authors = (props) => {
   const [albumName, setAlbumName] = useState("");
 
   useEffect(() => {
-    fetch(`${apiUrl}authors`)
+    fetch(`${apiUrl}Authors`)
       .then((response) => response.json())
       .then((data) => setDisplayData(data.authors))
       .catch(() => console.log("Fetch not working"));
@@ -37,6 +37,8 @@ const Authors = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(firstName);
+    console.log(LastName);
     const submitObject = {
       firstName: firstName,
       lastName: LastName,
@@ -44,7 +46,7 @@ const Authors = (props) => {
 
     let current = [...displayData];
 
-    fetch(`${apiUrl}`, {
+    fetch(`${apiUrl}Authors`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

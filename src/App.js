@@ -12,7 +12,7 @@ function App() {
       <Link to="/vinyls"> Cookbooks </Link>
       {/* <Main /> */}
       <Routes>
-        <Route path="/Authors/" element={<Authors />} />
+        <Route path="/Authors" element={<Authors />} />
         {/* <Route path="/cookbooks/" element={<Cookbooks />} /> */}
       </Routes>
     </div>
